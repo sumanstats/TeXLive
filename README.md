@@ -1,6 +1,6 @@
 # TeXLive-PreTest with Pygments
 
-**Note**: This is transitional repo that will be TexLive 2018 once it is released officially by TUG group.
+**Note**: This is transitional repo that will be [TeXLive-2018](https://www.tug.org/texlive/pretest.html) once it is released officially by TUG group.
 
 [![TexLive:2018](https://img.shields.io/badge/TeX%20Live-2018-blue.svg)](https://www.tug.org/texlive/pretest.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/sumandoc/TeXLive-2018/blob/master/LICENSE)

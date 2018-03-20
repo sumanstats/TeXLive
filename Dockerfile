@@ -23,5 +23,5 @@ RUN curl -sL http://ftp.math.utah.edu/pub/tlpretest/install-tl-unx.tar.gz | tar 
   && rm -rf install-tl
 
 ENV PATH /usr/local/texlive/2018/bin/x86_64-linux:$PATH
-
+WORKDIR /home
 CMD ["tlmgr", "--version"]

@@ -3,9 +3,12 @@
 **Note**: This is transitional repo that will be [TeXLive-2018](https://www.tug.org/texlive/pretest.html) once it is released officially by TUG group.
 
 [![TexLive:2018](https://img.shields.io/badge/TeX%20Live-2018-blue.svg)](https://www.tug.org/texlive/pretest.html)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/sumandoc/TeXLive-2018/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/github/license/sumandoc/texlive-2018.svg)](https://github.com/sumandoc/TeXLive-2018/blob/master/LICENSE)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![](https://images.microbadger.com/badges/image/sumdoc/texlive-2018.svg)](https://microbadger.com/images/sumdoc/texlive-2018 "Get your own image badge on microbadger.com")
+[![Build](https://img.shields.io/docker/automated/sumdoc/texlive-2018.svg)](https://hub.docker.com/r/sumdoc/texlive-2018/)
+[![Docker Pull](https://img.shields.io/docker/pulls/sumdoc/texlive-2018.svg)](https://hub.docker.com/r/sumdoc/texlive-2018/)
+
 
 
 Contains full ***TeXLive-PreTest*** with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted).

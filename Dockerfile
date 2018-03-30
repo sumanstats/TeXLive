@@ -10,8 +10,8 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 
 RUN apt-get update \
-  && apt-get install -y gnupg git wget curl make libgetopt-long-descriptive-perl \
-  libdigest-perl-md5-perl python python-pygments && rm -rf /var/lib/apt/lists/*
+  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl \
+  libdigest-perl-md5-perl python-pygments && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
 RUN curl -sL http://ftp.math.utah.edu/pub/tlpretest/install-tl-unx.tar.gz | tar zxf - \

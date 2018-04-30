@@ -1,4 +1,4 @@
-# TeXLive-PreTest with Pygments 
+# TeXLive-2018 with Python-Pygments 
 
 [![TexLive:2018](https://img.shields.io/badge/TeX%20Live-2018-blue.svg)](https://www.tug.org/texlive/pretest.html)
 [![License: MIT](https://img.shields.io/github/license/sumandoc/texlive-2018.svg)](https://github.com/sumandoc/TeXLive-2018/blob/master/LICENSE)
@@ -8,7 +8,7 @@
 
 
 
-Contains full ***TeXLive-PreTest*** with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
+Contains full **TeXLive-2018** with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
 
 
 ## How to get the image?

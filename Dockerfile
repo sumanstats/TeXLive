@@ -14,11 +14,11 @@ RUN apt-get update \
   libdigest-perl-md5-perl wget python-pygments fontconfig && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
-RUN curl -sL ftp://tug.org/historic/systems/texlive/2018/install-tl-unx.tar.gz | tar zxf - \
+RUN curl -sL http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme scheme-full" > profile \
-  && ./install-tl -repository http://mirror.utexas.edu/ctan/systems/texlive/tlnet -profile profile \
+  && ./install-tl -repository http://mirror.ctan.org/systems/texlive/tlnet -profile profile \
   && cd .. \
   && rm -rf install-tl
 

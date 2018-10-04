@@ -3,8 +3,8 @@
 [![TexLive:2018](https://img.shields.io/badge/TeX%20Live-2018-blue.svg)](https://www.tug.org/texlive/pretest.html)
 [![License: MIT](https://img.shields.io/github/license/sumandoc/texlive-2018.svg)](https://github.com/sumandoc/TeXLive-2018/blob/master/LICENSE)
 [![](https://images.microbadger.com/badges/image/sumdoc/texlive-2018.svg)](https://microbadger.com/images/sumdoc/texlive-2018 "Get your own image badge on microbadger.com")
-[![Build](https://img.shields.io/docker/automated/sumdoc/texlive-2018.svg)](https://hub.docker.com/r/sumdoc/texlive-2018/)
 [![Docker Pull](https://img.shields.io/docker/pulls/sumdoc/texlive-2018.svg)](https://hub.docker.com/r/sumdoc/texlive-2018/)
+[![Github Stars](https://img.shields.io/github/stars/sumandoc/TeXLive-2018.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive-2018)
 
 
 

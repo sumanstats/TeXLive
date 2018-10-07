@@ -10,7 +10,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 
 RUN apt-get update \
-  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl \
+  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl make \
   libdigest-perl-md5-perl wget python-pygments fontconfig && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /

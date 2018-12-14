@@ -1,9 +1,7 @@
 # TeXLive-2018 with Python-Pygments 
 
-[![TexLive:2018](https://img.shields.io/badge/TeX%20Live-2018-blue.svg)](https://www.tug.org/texlive/pretest.html)
+[![TexLive:2018](https://img.shields.io/badge/TeX%20Live-2018-blue.svg)](https://www.tug.org/texlive/quickinstall.html)
 [![License: MIT](https://img.shields.io/github/license/sumandoc/texlive-2018.svg)](https://github.com/sumandoc/TeXLive-2018/blob/master/LICENSE)
-[![](https://images.microbadger.com/badges/image/sumdoc/texlive-2018.svg)](https://microbadger.com/images/sumdoc/texlive-2018 "Get your own image badge on microbadger.com")
-[![Docker Pull](https://img.shields.io/docker/pulls/sumdoc/texlive-2018.svg)](https://hub.docker.com/r/sumdoc/texlive-2018/)
 [![Github Stars](https://img.shields.io/github/stars/sumandoc/TeXLive-2018.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive-2018)
 
 
@@ -18,7 +16,7 @@ If it helped you, consider making a small donation.
 
 From the interactive docker shell, pull this image with:
 
-`docker pull sumdoc/texlive-2018`
+`docker pull sumankhanal/texlive-2018`
 
 ## Why should you use it?
 
@@ -29,7 +27,7 @@ If you work with Latex documents, this is useful to compile your document **inde
 After you are done with the pull, mount the directory present in your host operating system containing .tex files 
 into docker image like this:
 
-`docker run -it -v /c/Users/username/Folder_with_tex:/home -w /home sumdoc/texlive-2018 bin/bash`
+`docker run -it -v /c/Users/username/Folder_with_tex:/home -w /home sumankhanal/texlive-2018 bin/bash`
 
 
 You will now have access to the terminal. Your working dir will be `/home` where you will see the .tex files.

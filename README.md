@@ -6,7 +6,7 @@
 
 
 
-Contains full **TeXLive-2018** with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
+Contains full **TeXLive-2018** with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [Pandoc](https://pandoc.org/index.html) and [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
 
 If it helped you, consider making a small donation.
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/sumandoc)

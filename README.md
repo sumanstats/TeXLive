@@ -35,5 +35,5 @@ You will now have access to the terminal. Your working dir will be `/home` where
 Now run:
 `pdflatex -shell-escape -synctex=1 -interaction=nonstopmode yourtex.tex` and see your **yourtex.tex** file getting compiled.
 
-**The size of image is 3 GB** which is quite big but
+**The size of image is 4 GB** which is quite big but
 its ***cool*** with all stuff that's available in **CTAN**. :)

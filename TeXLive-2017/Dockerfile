@@ -15,6 +15,8 @@ RUN curl -sL curl -sL http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme scheme-full" > profile \
+  && echo "tlpdbopt_install_docfiles 0" >> profile \
+  && echo "tlpdbopt_install_srcfiles 0" >> profile \
   && ./install-tl -repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2017/tlnet-final/ -profile profile \
   && cd .. \
   && rm -rf install-tl \

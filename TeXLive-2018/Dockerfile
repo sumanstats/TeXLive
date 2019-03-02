@@ -18,6 +18,8 @@ RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme scheme-full" > profile \
+  && echo "tlpdbopt_install_docfiles 0" >> profile \
+  && echo "tlpdbopt_install_srcfiles 0" >> profile \
   && ./install-tl -repository http://mirror.utexas.edu/ctan/systems/texlive/tlnet -profile profile \
   && cd .. \
   && rm -rf install-tl \

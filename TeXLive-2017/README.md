@@ -1,7 +1,8 @@
 # TeX Live-2017 with Python-Pygments
 
 [![TexLive:2017](https://img.shields.io/badge/TeX%20Live-2017-blue.svg)](https://www.tug.org/texlive/acquire.html)
-[![Github Stars](https://img.shields.io/github/stars/sumandoc/TeXLive.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive)
+[![License: MIT](https://img.shields.io/github/license/sumanstats/texlive.svg)](https://github.com/sumanstats/TeXLive/blob/master/LICENSE)
+[![Github Stars](https://img.shields.io/github/stars/sumanstats/TeXLive.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive)
 
 
 

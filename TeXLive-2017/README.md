@@ -2,7 +2,7 @@
 
 [![TexLive:2017](https://img.shields.io/badge/TeX%20Live-2017-blue.svg)](https://www.tug.org/texlive/acquire.html)
 [![License: MIT](https://img.shields.io/github/license/sumanstats/texlive.svg)](https://github.com/sumanstats/TeXLive/blob/master/LICENSE)
-[![Github Stars](https://img.shields.io/github/stars/sumanstats/TeXLive.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive)
+[![Github Stars](https://img.shields.io/github/stars/sumanstats/TeXLive.svg?style=social&label=Github)](https://github.com/sumanstats/TeXLive)
 
 
 
@@ -11,7 +11,7 @@ Also contains **pandoc** and **[ImageMagick®](https://www.imagemagick.org/scrip
 
 
 If it helped you, consider making a small donation.
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/sumandoc)
+
 
 ## How to get the image?
 

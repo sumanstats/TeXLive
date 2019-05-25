@@ -1,8 +1,8 @@
 # TeXLive-distributions with Python-Pygments and Pandoc
 
 
-[![License: MIT](https://img.shields.io/github/license/sumandoc/texlive-2018.svg)](https://github.com/sumandoc/TeXLive-2018/blob/master/LICENSE)
-[![Github Stars](https://img.shields.io/github/stars/sumandoc/TeXLive-2018.svg?style=social&label=Github)](https://github.com/sumandoc/TeXLive)
+[![License: MIT](https://img.shields.io/github/license/sumanstats/texlive.svg)](https://github.com/sumanstats/TeXLive/blob/master/LICENSE)
+[![Github Stars](https://img.shields.io/github/stars/sumanstats/TeXLive.svg?style=social&label=Github)](https://github.com/sumanstats/TeXLive)
 
 Image            | Description                               
 ---------------- | -----------------------------------------  

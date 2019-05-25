@@ -8,6 +8,7 @@ Image            | Description
 ---------------- | -----------------------------------------  
 [TeXLive-2017](https://hub.docker.com/r/sumankhanal/texlive-2017/) | Docker image with full TeXLive-2017.
 [TeXLive-2018](https://hub.docker.com/r/sumankhanal/texlive-2018/) | Docker image with full TeXLive-2018.
+[TeXLive-2019](https://hub.docker.com/r/sumankhanal/texlive-2019/) | Docker image with full TeXLive-2019.
 
 
 
@@ -18,7 +19,6 @@ Check respective images.
 
 
 If it helped you, consider making a small donation.
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/sumandoc)
 
 
 

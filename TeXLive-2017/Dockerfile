@@ -1,7 +1,7 @@
 FROM debian:sid
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    PANDOC=2.6
+    PANDOC=2.7.2
 
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 

@@ -8,7 +8,7 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 RUN apt-get update \
   && apt-get install -y gnupg wget curl libgetopt-long-descriptive-perl \
-  libdigest-perl-md5-perl python-pygments fontconfig && rm -rf /var/lib/apt/lists/*
+  libdigest-perl-md5-perl python3-pygments fontconfig && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
 RUN curl -sL curl -sL http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2017/install-tl-unx.tar.gz | tar zxf - \

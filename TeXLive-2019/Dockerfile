@@ -2,7 +2,7 @@ FROM debian:sid
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    PANDOC=2.7.2
+    PANDOC=2.7.3
 
 
 
@@ -11,7 +11,7 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 RUN apt-get update \
   && apt-get install -y gnupg curl libgetopt-long-descriptive-perl make \
-  libdigest-perl-md5-perl wget python-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
+  libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
 RUN curl -sL http://mirror.utexas.edu/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \

@@ -12,7 +12,7 @@ Image            | Description
 
 
 
-Contains full **TeXLive** distributions for different years with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [Pandoc](https://pandoc.org/index.html) which is a free and open-source document converter, widely used as a writing tool (especially by scholars) and as a basis for publishing workflows, and [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
+Contains full **TeXLive** distributions for different years with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [Pandoc](https://pandoc.org/index.html) which is a free and open-source document converter, widely used as a writing tool (especially by scholars) and as a basis for publishing workflows.
 
 ### How to use?
 Check respective images.

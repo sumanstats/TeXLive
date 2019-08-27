@@ -18,6 +18,8 @@ install:
 
 ## A few simple / crude tests
 after_install:
+  - pwd
+  - ls 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ${basic}
   - docker push ${minimal}

@@ -4,7 +4,7 @@ ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PANDOC=2.7.3
 ENV PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
-
+ARG scheme=scheme-full
 
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
@@ -17,7 +17,7 @@ WORKDIR /
 RUN curl -sL curl -sL http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/install-tl-unx.tar.gz | tar zxf - \
   && mv install-tl-20* install-tl \
   && cd install-tl \
-  && echo "selected_scheme scheme-full" > profile \
+  && echo "selected_scheme ${scheme}" > profile \
   && echo "tlpdbopt_install_docfiles 0" >> profile \
   && echo "tlpdbopt_install_srcfiles 0" >> profile \
   && ./install-tl -repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/tlnet-final/ -profile profile \

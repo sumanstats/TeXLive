@@ -7,8 +7,7 @@ services:
 env:
   global:
     - DOCKER_OPTS="docker build --build-arg"
-    - basic=sumankhanal/test:basic
-    - minimal=sumankhanal/test:minimal
+    - USER=sumankhanal
   matrix:
     - DOCKER_VER=TeXLive-2017
     - DOCKER_VER=TeXLive-2018
@@ -16,10 +15,9 @@ env:
   
 script:
   - cd ${DOCKER_VER}
-  - ${DOCKER_OPTS} scheme=scheme-basic -t ${basic} .
-  - ${DOCKER_OPTS} scheme=scheme-minimal -t ${minimal} .
-  - pwd
-  - ls 
+  - REPO=echo ${DOCKER_VER} | tr 'A-Z' 'a-z'
+  - ${DOCKER_OPTS} scheme=scheme-basic -t ${user}/{repo}:basic .
+  - ${DOCKER_OPTS} scheme=scheme-minimal -t ${user}/{repo}:minimal .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push ${basic}
-  - docker push ${minimal}
+  - docker push ${user}/{repo}:basic
+  - docker push ${user}/{repo}:minimal

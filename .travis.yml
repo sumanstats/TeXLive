@@ -6,13 +6,16 @@ services:
 
 env:
   global:
+    - DOCKER_OPTS="docker build --build-arg"
     - basic=sumankhanal/test:basic
     - minimal=sumankhanal/test:minimal
   
+script:
+  - cd TeXLive-2018
 ## Make sure all containers build without error.
 install: 
-  - docker build --build-arg AD=scheme-basic -t ${basic} .
-  - docker build --build-arg AD=scheme-minimal -t ${minimal} .
+  - ${DOCKER_OPTS} scheme=scheme-basic -t ${basic} .
+  - ${DOCKER_OPTS} scheme=scheme-minimal -t ${minimal} .
   
 
 ## A few simple / crude tests

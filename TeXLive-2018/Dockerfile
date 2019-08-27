@@ -3,7 +3,7 @@ FROM debian:sid
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PANDOC=2.7.3
-
+ENV PATH /usr/local/texlive/2018/bin/x86_64-linux:$PATH
 
 
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
@@ -27,6 +27,5 @@ RUN curl -sL curl -sL http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/
   && dpkg -i pandoc-${PANDOC}-1-amd64.deb && rm pandoc-${PANDOC}-1-amd64.deb
 
 
-ENV PATH /usr/local/texlive/2018/bin/x86_64-linux:$PATH
 WORKDIR /home
 CMD ["tlmgr", "--version"]

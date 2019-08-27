@@ -15,7 +15,7 @@ env:
   
 script:
   - cd ${DOCKER_VER}
-  - REPO=eval echo "${DOCKER_VER} | tr 'A-Z' 'a-z'"
+  - REPO=echo "${DOCKER_VER}" | tr 'A-Z' 'a-z'
   - echo "${REPO}"
   #- ${DOCKER_OPTS} scheme=scheme-basic -t "${user}/${REPO}:basic" .
   #- ${DOCKER_OPTS} scheme=scheme-minimal -t "${user}/${REPO}:minimal" .

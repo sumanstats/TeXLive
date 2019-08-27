@@ -1,0 +1,16 @@
+sudo: required
+
+services:
+  - docker
+
+## Make sure all containers build without error.
+before_install: 
+  - docker build --build-arg AD=scheme-basic -t sumankhanal/test:basic .
+  - docker build --build-arg AD=scheme-minimal -t sumankhanal/test:minimal .
+  
+
+## A few simple / crude tests
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push sumankhanal/test:basic
+  - docker push sumankhanal/test:minimal

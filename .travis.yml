@@ -5,11 +5,12 @@ services:
 
 
 env:
-  - basic=sumankhanal/test:basic
-  - minimal=sumankhanal/test:minimal
+  global:
+    - basic=sumankhanal/test:basic
+    - minimal=sumankhanal/test:minimal
   
 ## Make sure all containers build without error.
-before_install: 
+install: 
   - docker build --build-arg AD=scheme-basic -t ${basic} .
   - docker build --build-arg AD=scheme-minimal -t ${minimal} .
   

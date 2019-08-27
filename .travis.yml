@@ -20,7 +20,9 @@ script:
   - ${DOCKER_OPTS} scheme=scheme-basic -t ${USER}/${REPO}:basic .
   - ${DOCKER_OPTS} scheme=scheme-minimal -t ${USER}/${REPO}:minimal .
   - ${DOCKER_OPTS} scheme=scheme-small -t ${USER}/${REPO}:small .
+  - ${DOCKER_OPTS} scheme=scheme-full -t ${USER}/${REPO}:full .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ${USER}/${REPO}:basic
   - docker push ${USER}/${REPO}:minimal
   - docker push ${USER}/${REPO}:small
+  - docker push ${USER}/${REPO}:full

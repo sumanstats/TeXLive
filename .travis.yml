@@ -10,14 +10,10 @@ env:
     - basic=sumankhanal/test:basic
     - minimal=sumankhanal/test:minimal
   
-install:
+script:
   - cd TeXLive-2018
   - ${DOCKER_OPTS} scheme=scheme-basic -t ${basic} .
   - ${DOCKER_OPTS} scheme=scheme-minimal -t ${minimal} .
-  
-
-## A few simple / crude tests
-after_install:
   - pwd
   - ls 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin

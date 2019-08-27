@@ -3,14 +3,19 @@ sudo: required
 services:
   - docker
 
+
+env:
+  - basic=sumankhanal/test:basic
+  - minimal=sumankhanal/test:minimal
+  
 ## Make sure all containers build without error.
 before_install: 
-  - docker build --build-arg AD=scheme-basic -t sumankhanal/test:basic .
-  - docker build --build-arg AD=scheme-minimal -t sumankhanal/test:minimal .
+  - docker build --build-arg AD=scheme-basic -t ${basic} .
+  - docker build --build-arg AD=scheme-minimal -t ${minimal} .
   
 
 ## A few simple / crude tests
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push sumankhanal/test:basic
-  - docker push sumankhanal/test:minimal
+  - docker push ${basic}
+  - docker push ${minimal}

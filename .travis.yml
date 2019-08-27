@@ -16,7 +16,7 @@ env:
 script:
   - cd ${DOCKER_VER}
   - REPO=echo ${DOCKER_VER} | tr 'A-Z' 'a-z'
-  - echo "${REPO}"
+  - echo ${REPO}
   #- ${DOCKER_OPTS} scheme=scheme-basic -t "${user}/${REPO}:basic" .
   #- ${DOCKER_OPTS} scheme=scheme-minimal -t "${user}/${REPO}:minimal" .
   #- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin

@@ -22,3 +22,4 @@ If it helped you, consider making a small donation.
 
 
 
+For detailed reading on TeXLive documentation, go [here](https://www.tug.org/texlive/doc/texlive-en/texlive-en.pdf).

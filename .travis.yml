@@ -9,9 +9,13 @@ env:
     - DOCKER_OPTS="docker build --build-arg"
     - basic=sumankhanal/test:basic
     - minimal=sumankhanal/test:minimal
+  matrix:
+    - DOCKER_VER=TeXLive-2017
+    - DOCKER_VER=TeXLive-2018
+    - DOCKER_VER=TeXLive-2019
   
 script:
-  - cd TeXLive-2018
+  - cd ${DOCKER_VER}
   - ${DOCKER_OPTS} scheme=scheme-basic -t ${basic} .
   - ${DOCKER_OPTS} scheme=scheme-minimal -t ${minimal} .
   - pwd

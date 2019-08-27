@@ -18,9 +18,9 @@ script:
   - REPO="$(echo ${DOCKER_VER} | tr 'A-Z' 'a-z')"
   - echo "${REPO}"
   - ${DOCKER_OPTS} scheme=scheme-basic -t ${USER}/${REPO}:basic .
-  - ${DOCKER_OPTS} scheme=scheme-minimal -t ${user}/${REPO}:minimal .
+  - ${DOCKER_OPTS} scheme=scheme-minimal -t ${USER}/${REPO}:minimal .
   - ${DOCKER_OPTS} scheme=scheme-small -t ${USER}/${REPO}:small .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push ${user}/${REPO}:basic
-  - docker push ${user}/${REPO}:minimal
-  - docker push ${user}/${REPO}:small
+  - docker push ${USER}/${REPO}:basic
+  - docker push ${USER}/${REPO}:minimal
+  - docker push ${USER}/${REPO}:small

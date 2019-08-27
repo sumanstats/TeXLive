@@ -12,7 +12,6 @@ env:
   
 script:
   - cd TeXLive-2018
-## Make sure all containers build without error.
   - ${DOCKER_OPTS} scheme=scheme-basic -t ${basic} .
   - ${DOCKER_OPTS} scheme=scheme-minimal -t ${minimal} .
   

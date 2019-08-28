@@ -4,6 +4,8 @@
 [![License: MIT](https://img.shields.io/github/license/sumanstats/texlive.svg)](https://github.com/sumanstats/TeXLive/blob/master/LICENSE)
 [![Github Stars](https://img.shields.io/github/stars/sumanstats/TeXLive.svg?style=social&label=Github)](https://github.com/sumanstats/TeXLive)
 
+[![Build Status](https://travis-ci.com/sumanstats/TeXLive.svg?branch=master)](https://travis-ci.com/sumanstats/TeXLive)
+
 Image            | Available tags | Description                               
 ---------------- | -------------- | ------------------------  
 [TeXLive-2017](https://hub.docker.com/r/sumankhanal/texlive-2017/) | **minimal**, **basic**, **small**, **full** | Docker image with TeXLive-2017.

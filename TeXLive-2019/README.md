@@ -16,18 +16,20 @@ If it helped you, consider making a small donation.
 
 From the interactive docker shell, pull this image with:
 
-`docker pull sumankhanal/texlive-2019`
+`docker pull sumankhanal/texlive-2019:<tag>`
+
+Tags available are **minimal, basic, small** and **full**.
 
 ## Why should you use it?
 
-If you work with Latex documents, this is useful to compile your document **independent of OS and without the need to install anything**.  It contains all the compilers: **pdflatex**, **xelatex** and **lualatex**.
+If you work with Latex documents, this is useful to compile your document **independent of OS and without the need to install anything**.  All the compilers: **pdflatex**, **xelatex** and **lualatex** are available in images with tag `small` and `full`.
 
 ## How to run this image/ How do you use it ?
 
 After you are done with the pull, mount the directory present in your host operating system containing .tex files 
 into docker image like this:
 
-`docker run -it -v /c/Users/username/Folder_with_tex:/home -w /home sumankhanal/texlive-2019 bin/bash`
+`docker run -it -v /c/Users/username/Folder_with_tex:/home -w /home sumankhanal/texlive-2019:<tag> bin/bash`
 
 
 You will now have access to the terminal. Your working dir will be `/home` where you will see the .tex files.
@@ -35,5 +37,7 @@ You will now have access to the terminal. Your working dir will be `/home` where
 Now run:
 `pdflatex -shell-escape -synctex=1 -interaction=nonstopmode yourtex.tex` and see your **yourtex.tex** file getting compiled.
 
-**The size of image is 4 GB** which is quite big but
+**The size of full image is 4 GB** which is quite big but
 its ***cool*** with all stuff that's available in **CTAN**. :)
+
+For compiling your [beamer slides](https://ctan.org/pkg/beamer?lang=en) and thesis, image with `small` tag is adequate, or you can install `beamer` and `minted` packages with command `tlmgr install beamer minted` in image with `basic` tag. This way pulling image will be faster with less space consumption.

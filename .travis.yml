@@ -8,21 +8,25 @@ env:
   global:
     - DOCKER_OPTS="docker build --build-arg"
     - USER=sumankhanal
+    - REPO="$(echo ${DOCKER_VER} | tr 'A-Z' 'a-z')"
   matrix:
     - DOCKER_VER=TeXLive-2017
     - DOCKER_VER=TeXLive-2018
     - DOCKER_VER=TeXLive-2019
   
-script:
+install:
   - cd ${DOCKER_VER}
-  - REPO="$(echo ${DOCKER_VER} | tr 'A-Z' 'a-z')"
   - echo "${REPO}"
   - ${DOCKER_OPTS} scheme=scheme-basic -t ${USER}/${REPO}:basic .
   - ${DOCKER_OPTS} scheme=scheme-minimal -t ${USER}/${REPO}:minimal .
-  - ${DOCKER_OPTS} scheme=scheme-small -t ${USER}/${REPO}:small .
-  - ${DOCKER_OPTS} scheme=scheme-full -t ${USER}/${REPO}:full .
+  #- ${DOCKER_OPTS} scheme=scheme-small -t ${USER}/${REPO}:small .
+  #- ${DOCKER_OPTS} scheme=scheme-full -t ${USER}/${REPO}:full .
+  
+after_install:
+  - pwd
+  - docker images
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ${USER}/${REPO}:basic
   - docker push ${USER}/${REPO}:minimal
-  - docker push ${USER}/${REPO}:small
-  - docker push ${USER}/${REPO}:full
+  #- docker push ${USER}/${REPO}:small
+  #- docker push ${USER}/${REPO}:full

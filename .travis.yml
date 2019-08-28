@@ -24,8 +24,9 @@ install:
   #- ${DOCKER_OPTS} scheme=scheme-full -t ${USER}/${REPO}:full .
   
 after_install:
+  - cd ${DOCKER_VER}
+  - REPO="$(echo ${DOCKER_VER} | tr 'A-Z' 'a-z')"
   - pwd
-  - docker images
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ${USER}/${REPO}:basic
   - docker push ${USER}/${REPO}:minimal

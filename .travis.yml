@@ -8,14 +8,15 @@ env:
   global:
     - DOCKER_OPTS="docker build --build-arg"
     - USER=sumankhanal
-    - REPO="$(echo ${DOCKER_VER} | tr 'A-Z' 'a-z')"
   matrix:
     - DOCKER_VER=TeXLive-2017
     - DOCKER_VER=TeXLive-2018
     - DOCKER_VER=TeXLive-2019
-  
+ 
+ 
 install:
   - cd ${DOCKER_VER}
+  - REPO="$(echo ${DOCKER_VER} | tr 'A-Z' 'a-z')"
   - echo "${REPO}"
   - ${DOCKER_OPTS} scheme=scheme-basic -t ${USER}/${REPO}:basic .
   - ${DOCKER_OPTS} scheme=scheme-minimal -t ${USER}/${REPO}:minimal .

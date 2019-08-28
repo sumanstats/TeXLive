@@ -6,10 +6,7 @@
 
 
 
-Contains full **TeXLive-2018** with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [Pandoc](https://pandoc.org/index.html) and [ImageMagick®](https://www.imagemagick.org/script/index.php) for image manipulation to include in TeX files.
-
-If it helped you, consider making a small donation.
-
+Contains full **TeXLive-2018** with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [Pandoc](https://pandoc.org/index.html), a universal document converter.
 
 ## How to get the image?
 
@@ -39,3 +36,5 @@ Now run:
 its ***cool*** with all stuff that's available in **CTAN**. :)
 
 For compiling your [beamer slides](https://ctan.org/pkg/beamer?lang=en) and thesis, image with `small` tag is adequate, or you can install `beamer` and `minted` packages with command `tlmgr install beamer minted` in image with `basic` tag. This way pulling image will be faster with less space consumption.
+
+If it helped you, consider making a small donation.

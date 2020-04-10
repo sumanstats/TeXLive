@@ -9,10 +9,9 @@ env:
     - DOCKER_OPTS="docker build --build-arg"
     - USER=sumankhanal
   matrix:
-    - DOCKER_VER=TeXLive-2017
     - DOCKER_VER=TeXLive-2018
     - DOCKER_VER=TeXLive-2019
- 
+    - DOCKER_VER=TeXLive-2020
  
 script:
   - cd ${DOCKER_VER}

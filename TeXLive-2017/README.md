@@ -1,13 +1,13 @@
 # TeX Live-2017 with Python-Pygments
 
-[![TexLive:2017](https://img.shields.io/badge/TeX%20Live-2017-blue.svg)](https://www.tug.org/texlive/acquire.html)
+[![TexLive:2017](https://img.shields.io/badge/TeX%20Live-2017-blue.svg)](https://www.tug.org/historic/)
 [![License: MIT](https://img.shields.io/github/license/sumanstats/texlive.svg)](https://github.com/sumanstats/TeXLive/blob/master/LICENSE)
 [![Github Stars](https://img.shields.io/github/stars/sumanstats/TeXLive.svg?style=social&label=Github)](https://github.com/sumanstats/TeXLive)
 
 
 
 Contains full **TeXLive-2017** with additional [python-pygments library](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted).
-Also contains **pandoc**, a universal document converter.
+Also contains [**Pandoc**](https://pandoc.org/index.html), a universal document converter.
 
 ## How to get the image?
 
@@ -18,6 +18,9 @@ From the interactive docker shell, pull this image with:
 ## Why should you use it?
 
 If you work with Latex documents, this is useful to compile your document **independent of OS and without the need to install anything**.  All the compilers: **pdflatex**, **xelatex** and **lualatex** are available in images with tag `small` and `full`.
+
+You can easily convert markdown documents to `pdf` with **pandoc**.
+
 
 ## How to run this image/ How do you use it ?
 
@@ -32,10 +35,17 @@ You will now have access to the terminal. Your working dir will be `/home` where
 Now run:
 `pdflatex -shell-escape -synctex=1 -interaction=nonstopmode yourtex.tex` and see your **yourtex.tex** file getting compiled.
 
-**The size of image is 3 GB** which is quite big but
+**The size of image is 1.33 GB** which is quite big but
 its ***cool*** with all stuff that's available in **CTAN**. :)
 
-For compiling your [beamer slides](https://ctan.org/pkg/beamer?lang=en) and thesis, image with `small` tag is adequate, or you can install `beamer` and `minted` packages with command `tlmgr install beamer minted` in image with `basic` tag. This way pulling image will be faster with less space consumption.
+
+
+**Note:**
+
++ For compiling your [beamer slides](https://ctan.org/pkg/beamer?lang=en) and thesis, image with `small` tag is adequate
+
++ Or you can install `beamer` and `minted` packages with command `tlmgr install beamer minted` in image with `basic` tag. This way pulling image will be faster with less space consumption.
 
 
 If it helped you, consider making a small donation.
+

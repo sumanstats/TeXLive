@@ -2,7 +2,7 @@ FROM debian:sid
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    PANDOC=2.9.1
+    PANDOC=2.9.2.1
     
 ENV PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
 ARG scheme=scheme-full
@@ -15,7 +15,7 @@ RUN apt-get update \
   libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
-RUN curl -sL curl -sL http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/install-tl-unx.tar.gz | tar zxf - \
+RUN curl -sL http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2018/install-tl-unx.tar.gz | tar zxf - \
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme ${scheme}" > profile \

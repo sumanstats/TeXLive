@@ -16,8 +16,8 @@ RUN apt-get update \
   libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /
-RUN curl -o ${TEXLIVE} http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2019/tlnet-final/install-tl.zip \
-  && unzip ${TEXLIVE} \
+RUN curl -so ${TEXLIVE}.zip http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2019/tlnet-final/install-tl.zip \
+  && unzip ${TEXLIVE}.zip \
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme ${scheme}" > profile \
@@ -25,7 +25,7 @@ RUN curl -o ${TEXLIVE} http://ftp.math.utah.edu/pub/tex/historic/systems/texlive
   && echo "tlpdbopt_install_srcfiles 0" >> profile \
   && ./install-tl -repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2019/tlnet-final/ -profile profile \
   && cd .. \
-  && rm -rf install-tl ${TEXLIVE} \
+  && rm -rf install-tl ${TEXLIVE}.zip \
   && wget https://github.com/jgm/pandoc/releases/download/${PANDOC}/pandoc-${PANDOC}-1-amd64.deb \
   && dpkg -i pandoc-${PANDOC}-1-amd64.deb && rm pandoc-${PANDOC}-1-amd64.deb
   

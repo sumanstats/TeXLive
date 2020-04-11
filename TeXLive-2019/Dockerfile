@@ -12,7 +12,7 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 
 RUN apt-get update \
-  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl make \
+  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl unzip make \
   libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
   
 WORKDIR /

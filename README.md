@@ -1,10 +1,13 @@
 # TeXLive-distributions with Python-Pygments and Pandoc
 
 
+
+[![Build Status](https://travis-ci.com/sumanstats/TeXLive.svg?branch=master)](https://travis-ci.com/sumanstats/TeXLive)
 [![License: MIT](https://img.shields.io/github/license/sumanstats/texlive.svg)](https://github.com/sumanstats/TeXLive/blob/master/LICENSE)
 [![Github Stars](https://img.shields.io/github/stars/sumanstats/TeXLive.svg?style=social&label=Github)](https://github.com/sumanstats/TeXLive)
 
-[![Build Status](https://travis-ci.com/sumanstats/TeXLive.svg?branch=master)](https://travis-ci.com/sumanstats/TeXLive)
+> Building Docker images for TeXLive
+
 
 | Image                                                              | Available tags                              | Description                     |
 |--------------------------------------------------------------------|---------------------------------------------|---------------------------------|

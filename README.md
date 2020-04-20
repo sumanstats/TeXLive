@@ -19,7 +19,7 @@
 
 Contains **TeXLive** distributions for different years with additional [**python-pygments library**](http://pygments.org/) for source code highlighting via [minted package](https://www.ctan.org/pkg/minted). Also contains [**Pandoc**](https://pandoc.org/index.html) which is a free and open-source document converter, widely used as a writing tool (especially by scholars) and as a basis for publishing workflows.
 
-### How to get the image?
+## How to get the image?
 
 From the interactive docker shell, pull this image with:
 
@@ -27,7 +27,7 @@ From the interactive docker shell, pull this image with:
 
 Tags available are **minimal, basic, small** and **full**.
 
-### Why to use ?
+## Why to use ?
 
 If you work with Latex documents, this is useful to compile your document **independent of OS and without the need to install anything**.  All the compilers: **pdflatex**, **xelatex** and **lualatex** are available in images with tag `small` and `full`.
 

@@ -2,7 +2,7 @@ FROM debian:testing
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    PANDOC=2.10.1 \
+    PANDOC=2.11 \
     TEXLIVE=tex-2019
 
 ENV PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH

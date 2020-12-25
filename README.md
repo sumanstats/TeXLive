@@ -43,4 +43,6 @@ You can easily convert markdown documents to `pdf` with **pandoc**.
 
 For detailed reading on TeXLive documentation, go [here](https://www.tug.org/texlive/doc/texlive-en/texlive-en.pdf).
 
-If it helped you, consider making a small donation.
+If it helped you in your work, consider buying me a coffee.
+
+<a href="https://www.buymeacoffee.com/sumankhanal"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=sumankhanal&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>

@@ -25,7 +25,7 @@ sub MAIN() {
 
             RUN tlmgr option repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/$texlive_version/tlnet-final/ \\
                 && tlmgr update --self \\
-                && tlmgr install fontawesome5 academicons multirow arydshln
+                && tlmgr install moderncv fontawesome5 academicons multirow arydshln
             END
         $file.IO.spurt: $dockerfile;
         say "Dockerfile generated."

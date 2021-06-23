@@ -37,6 +37,13 @@ You can easily convert markdown documents to `pdf` with **pandoc**.
 
 **Note:**
 
++ For old `texlive` versions, before running `tlmgr install`, run the command `tlmgr option repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/<year>/tlnet-final/ && tlmgr update --self`. Substitute `<year>` matching with the old `texlive` version. For example, if you want to use `texlive-2020` when `texlive-2021` is already released, do 
+
+```
+tlmgr option repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2020/tlnet-final/ && tlmgr update --self 
+tlmgr install <your-package>
+```
+
 + For compiling your [beamer slides](https://ctan.org/pkg/beamer?lang=en) and thesis, image with `small` tag is adequate
 
 + Or you can install `beamer` and `minted` packages with command `tlmgr install beamer minted` in image with `basic` tag. This way pulling image will be faster with less space consumption.

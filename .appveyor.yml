@@ -1,0 +1,17 @@
+version: 1.0.{build}
+image:
+- Ubuntu
+
+environment:
+  global:
+    DOCKER_OPTS: "docker build --build-arg"
+    USER: sumankhanal
+  matrix:
+    - TEX_VER: TeXLive-2020
+    - TEX_VER: TeXLive-2021
+
+build_script:
+  - ps: ./build.ps1
+
+deploy_script:
+  - ps: ./deploy.ps1

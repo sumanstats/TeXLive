@@ -8,5 +8,6 @@ docker build --build-arg scheme=scheme-minimal -t $env:USER/${REPO}:minimal .
 docker build --build-arg scheme=scheme-small -t $env:USER/${REPO}:small .
 docker build --build-arg scheme=scheme-full -t $env:USER/${REPO}:full .
 docker tag $env:USER/${REPO}:full $env:USER/${REPO}:latest
+cd ..
 
 Write-Host "Finished build"

@@ -2,7 +2,7 @@
 
 
 
-[![Build Status](https://travis-ci.com/sumanstats/TeXLive.svg?branch=master)](https://travis-ci.com/sumanstats/TeXLive)
+[![Build status](https://ci.appveyor.com/api/projects/status/c2xx89tkasui3qmh?svg=true)](https://ci.appveyor.com/project/sumanstats/texlive)
 [![License: MIT](https://img.shields.io/github/license/sumanstats/texlive.svg)](https://github.com/sumanstats/TeXLive/blob/master/LICENSE)
 [![Github Stars](https://img.shields.io/github/stars/sumanstats/TeXLive.svg?style=social&label=Github)](https://github.com/sumanstats/TeXLive)
 

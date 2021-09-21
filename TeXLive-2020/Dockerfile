@@ -1,9 +1,14 @@
-FROM debian:bullseye
-
+FROM debian:bullseye AS builder
 ENV LANG=C.UTF-8 \
-    LC_ALL=C.UTF-8 \
-    PANDOC=2.14.2 \
-    TEXLIVE=tex-2020
+    LC_ALL=C.UTF-8 
+RUN apt-get update \
+  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl make \
+  libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
+
+#multistage build  
+
+FROM builder AS build1
+ENV PANDOC=2.14.2
     
 ENV PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
 ARG scheme=scheme-full
@@ -11,10 +16,7 @@ ARG scheme=scheme-full
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 
-RUN apt-get update \
-  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl unzip make \
-  libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
-  
+
 WORKDIR /
 RUN curl -so ${TEXLIVE}.zip http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2020/tlnet-final/install-tl.zip \
   && unzip ${TEXLIVE}.zip \

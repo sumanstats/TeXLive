@@ -1,8 +1,13 @@
-FROM debian:bullseye
-
+FROM debian:bullseye AS builder
 ENV LANG=C.UTF-8 \
-    LC_ALL=C.UTF-8 \
-    PANDOC=2.14.2
+    LC_ALL=C.UTF-8 
+RUN apt-get update \
+  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl make \
+  libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
+  
+
+FROM builder AS build1
+ENV PANDOC=2.14.2
     
 ENV PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 ARG scheme=scheme-full
@@ -10,10 +15,7 @@ ARG scheme=scheme-full
 LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 
-RUN apt-get update \
-  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl make \
-  libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
-  
+
 WORKDIR /
 RUN curl -sL http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \
   && mv install-tl-20* install-tl \

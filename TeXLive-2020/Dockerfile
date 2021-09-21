@@ -3,7 +3,7 @@ FROM debian:bullseye AS builder
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PANDOC=2.14.2
-    
+
 RUN apt-get update \
   && apt-get install -y gnupg curl libgetopt-long-descriptive-perl \
   unzip make libdigest-perl-md5-perl wget python3-pygments fontconfig \
@@ -24,7 +24,7 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 WORKDIR /
 RUN curl -so ${TEXLIVE}.zip http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2020/tlnet-final/install-tl.zip \
-  && unzip ${TEXLIVE}.zip \
+  && unzip -qq ${TEXLIVE}.zip \
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme ${scheme}" > profile \

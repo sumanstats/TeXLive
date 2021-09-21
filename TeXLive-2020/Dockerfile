@@ -2,7 +2,7 @@ FROM debian:bullseye AS builder
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 
 RUN apt-get update \
-  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl make \
+  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl unzip make \
   libdigest-perl-md5-perl wget python3-pygments fontconfig  && rm -rf /var/lib/apt/lists/*
 
 #multistage build  

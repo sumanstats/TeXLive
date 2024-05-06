@@ -39,10 +39,10 @@ You can easily convert markdown documents to `pdf` with **pandoc**.
 
 **Note:**
 
-+ For old `texlive` versions, before running `tlmgr install`, run the command `tlmgr option repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/<year>/tlnet-final/ && tlmgr update --self`. Substitute `<year>` matching with the old `texlive` version. For example, if you want to use `texlive-2020` when `texlive-2021` is already released, do 
++ For old `texlive` versions, before running `tlmgr install`, run the command `tlmgr option repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/<year>/tlnet-final/ && tlmgr update --self`. Substitute `<year>` matching with the old `texlive` version. For example, if you want to use `texlive-2021` when `texlive-2024` is already released, do 
 
 ```
-tlmgr option repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2020/tlnet-final/ && tlmgr update --self 
+tlmgr option repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2021/tlnet-final/ && tlmgr update --self 
 tlmgr install <your-package>
 ```
 

@@ -21,7 +21,7 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 
 WORKDIR /
-RUN wget --no-check-certificate -O- http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/install-tl-unx.tar.gz | tar -xz \
+RUN wget --no-check-certificate -q -O- http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/install-tl-unx.tar.gz | tar -xz \
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme ${scheme}" > profile \

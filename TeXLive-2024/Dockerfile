@@ -21,7 +21,7 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 
 WORKDIR /
-RUN curl -sL http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/install-tl-unx.tar.gz | tar zxf - \
+RUN curl -sL http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/install-tl-unx.tar.gz | tar xzf - \
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme ${scheme}" > profile \

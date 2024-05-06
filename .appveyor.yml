@@ -2,13 +2,17 @@ version: 1.0.{build}
 image:
 - Ubuntu
 
+branches:
+  only:
+    - texlive2024
+
 environment:
   global:
     DOCKER_OPTS: "docker build --build-arg"
     USER: sumankhanal
   matrix:
-    - TEX_VER: TeXLive-2020
-    - TEX_VER: TeXLive-2021
+    # - TEX_VER: TeXLive-2020
+    - TEX_VER: TeXLive-2024
 
 build_script:
   - ps: ./build.ps1

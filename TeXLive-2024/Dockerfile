@@ -5,7 +5,7 @@ ENV LANG=C.UTF-8 \
     PANDOC=3.1.13
 
 RUN apt-get update \
-  && apt-get install -y gnupg curl libgetopt-long-descriptive-perl \
+  && apt-get install -y gnupg libgetopt-long-descriptive-perl \
   unzip make libdigest-perl-md5-perl wget python3-pygments fontconfig \
   && rm -rf /var/lib/apt/lists/* \
   && wget https://github.com/jgm/pandoc/releases/download/${PANDOC}/pandoc-${PANDOC}-1-amd64.deb \
@@ -21,7 +21,7 @@ LABEL maintainer="Dr Suman Khanal <suman81765@gmail.com>"
 
 
 WORKDIR /
-RUN curl -sL http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/install-tl-unx.tar.gz | tar xzf - \
+RUN wget --no-check-certificate -O- http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/install-tl-unx.tar.gz | tar -xz \
   && mv install-tl-20* install-tl \
   && cd install-tl \
   && echo "selected_scheme ${scheme}" > profile \

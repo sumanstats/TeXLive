@@ -8,7 +8,7 @@ branches:
 
 environment:
   global:
-    DOCKER_OPTS: "docker build --build-arg"
+    DOCKER_OPTS: docker build --build-arg
     USER: sumankhanal
   matrix:
     # - TEX_VER: TeXLive-2020
